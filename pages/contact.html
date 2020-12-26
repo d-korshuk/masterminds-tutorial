@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <style>
+        body {
+            font-family: Roboto Thin;
+            background-image: url('../images/background-contact.png');
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        .width-30 {
+	        width: 30%;
+        }
+                    
+        .contact-question {
+            background-color: rgb(255, 255, 255, 0.1);
+            margin-bottom: 4px;
+            text-align: center;
+        }
+
+        .contact-question-title {
+            color:  #F3D000;
+            font-size: 25px;
+        }
+
+        .button-yellow {
+            background-color: #F3D000;
+            border: none;
+            color: #442d4d;
+            padding: 5px 25px 5px 25px;
+            transition: 0.5s;
+        }
+
+        .button-yellow:hover {
+            background-color: #ddd4e0;
+            border: none;
+            color: #442d4d;
+            padding: 5px 25px 5px 25px;
+        }
+    </style>
+    <script>
+        function questionSent() {
+            alert ("Your question has been sent")
+        }
+    </script>
+</head>
+<body>
+ <!--Header-->
+<div>
+    <a href="home.html">
+         <img src="../images/logo.png" alt="logo not loaded" height="120"> 
+    </a>
+
+    <div class="navigation-links">
+        <a href="home.html" class="navigation-link">Home</a>
+        <a href="about.html" class="navigation-link">About</a>
+        <a href="course.html" class="navigation-link">Course</a>
+        <a href="contact.html" class="navigation-link">Contact</a>
+
+    </div>
+</div>  
+
+        <!--Middle-->
+    <div>
+        <div class="width-100 display-if">
+        <!--Map-->
+        <div class="width-100">
+            <iframe 
+                width="100%" 
+                height="410" 
+                frameborder="0" 
+                scrolling="no" 
+                marginheight="0" 
+                marginwidth="0" 
+                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=+(61000)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+                <a href="https://www.maps.ie/route-planner.htm">Google Route Planner</a>
+            </iframe>      
+            </div>
+            <!--Question-->
+            <div class="width-100 contact-question">
+                <span class="contact-question-title">Send us a question:</span>
+                <form action="" method="get" target="_self" class="yellow-text">
+                    Name: <br> <input type="text" name="nameField" class="width-30" required><br>
+                    Surname: <br> <input type="text" name="surnameField" class="width-30"><br>
+                    Age: <br> <input type="date" name="ageField" class="width-30" value="1990-01-01" max="2002-01-01" required><br>
+                    Gender: <br> 
+                    Male<input type="radio" name="genderField" value="Male" checked>
+                    Female<input type="radio" name="genderField" value="Female"><br>
+                    Tel: <br> <input type="tel" name="telField" class="width-30" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="093-123-45-67" required><br>
+                    Type of question: <br> 
+                    <select name="typefield" class="width-30">
+                        <option value="course">Question about course</option>
+                        <option value="lesson" selected>Question about lesson</option>
+                    </select><br>
+                    Question: <br>
+                    <textarea name="question" rows="5" class="width-30" minlength="3" required></textarea><br>
+
+                    <input type="submit" value="SEND" class="button-yellow" onclick="questionSent()"> 
+                    <input type="reset" value="RESET" class="button-yellow">
+                </form>
+            </div>
+        </div>
+
+        <div class="grey-text">
+            <b>Our address is:</b>
+            <address>61000 Kharkiv, Kharkiv Oblast</address>
+        </div>
+
+    </div>
+
+    <!--Footer-->
+    <div class="footer">
+        <div>
+            <a href="https://www.facebook.com/">
+                <img src="../images/fb.png" alt="Fb not loaded" height="50">
+            </a>
+
+            <a href="https://www.instagram.com/">
+                <img src="../images/ig.png" alt="Ig not loaded" height="50">
+            </a>
+
+            <a href="https://www.twitter.com/">
+                <img src="../images/tw.png" alt="Twitter not loaded" height="50">
+            </a>
+        </div>
+        <p class="mt-0">copyright &copy; <a href="mailto: diman.korshuk@gmail.com" class="grey-text"> Dima</a> <sup>&reg;</sup></p>
+    </div>
+</body>
+</html>
